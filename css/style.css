@@ -1,0 +1,72 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section#background-scale {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#background-scale:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  background-color: rgba(0, 0, 0, .5);
+}
+
+section#background-scale .background-scale {
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  transition: all 10000ms ease-in-out;
+  z-index: 50;
+}
+
+section#background-scale .section-header {
+  position: relative;
+  z-index: 150;
+
+  color: #ffffff;
+  text-align: center;
+}
+
+section#background-scale .section-header .title {
+  margin-bottom: 30px;
+
+  position: relative;
+  opacity: 0;
+}
+
+section#background-scale .section-header .text {
+  width: 600px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  text-align: center;
+}
+
+section#background-scale .section-header .button-wrapper {
+  position: relative;
+  opacity: 0;
+}
